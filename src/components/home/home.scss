@@ -1,0 +1,51 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr .6fr;
+    grid-template-rows: 26rem 16rem 16rem 16rem 8rem;
+    gap: 0px 0px;
+    grid-template-areas:
+      "ib ib . rs"
+      ". . . rs"
+      ". . . rs"
+      ". . . rs"
+      "f f f f";
+  
+    @media only screen and (max-width: 56.25em) {
+        grid-template-columns: 1fr 1fr .6fr;
+        grid-template-rows: 26rem 16rem 16rem 16rem 8rem;
+        gap: 0px 0px;
+        grid-template-areas:
+
+          "ib ib rs"
+          ". . rs"
+          ". . rs"
+          ". . rs"
+          ". . rs"
+          ". . rs"
+          "f f f";
+    }
+    @media only screen and (max-width: 37.5em) {
+      grid-template-columns: 1fr .5fr;
+      grid-template-rows: 12rem 10rem 10rem 10rem 6rem;
+      gap: 0px 0px;
+      grid-template-areas:
+        "ib rs"
+        ". rs"
+        ". rs"
+        ". rs"
+        ". rs"
+        ". rs"
+        ". rs"
+        ". rs"
+        ". rs"
+        ". rs"
+        ". rs"
+        "f f";
+    }
+  
+  }
+
+.bottom-bar { 
+    grid-area: f; 
+    border-top: var(--line);
+}

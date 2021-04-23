@@ -1,0 +1,93 @@
+.item {
+    
+  &__breaking {
+    grid-area: ib;
+    border-bottom: var(--line);
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    padding: 1.8rem;
+    grid-gap: 1.5rem;
+   
+
+    &:link, &:visited {
+      color: #000;
+      text-decoration: none;
+
+    }
+    
+
+    &-title {
+      font-size: 2.5rem;
+      margin-bottom: 1.6rem;
+    }
+
+    &-desc {
+      font-size: 1.4rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3; /* number of lines to show */
+      -webkit-box-orient: vertical;
+    }
+
+    &-image-section {
+      overflow: hidden;
+      height: 100%;
+      width: 100%;
+    }
+
+    &-image {
+      height: 100%;
+      width: 100%;
+    }
+
+    &-time {
+      font-size: 1.2rem;
+      padding: 2rem 0;
+    }
+
+    @media only screen and (max-width: 56.25em) {
+      &-title {
+        font-size: 1.6rem;
+        margin-bottom: .8rem;
+        
+      }
+  
+      &-desc {
+        font-size: .8rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* number of lines to show */
+        -webkit-box-orient: vertical;
+      }
+
+      &-time {
+        font-size: 1rem;
+        padding: 1rem 0;
+      }
+    }
+    @media only screen and (max-width: 37.5em) {
+      &-title {
+        font-size: 1rem;
+        margin-bottom: .5rem;
+        
+      }
+  
+      &-desc {
+        font-size: .5rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* number of lines to show */
+        -webkit-box-orient: vertical;
+      }
+      &-time {
+        font-size: .8rem;
+        padding: 1rem 0;
+      }
+    }
+
+  }
+}

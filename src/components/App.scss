@@ -1,0 +1,39 @@
+
+.header { 
+  grid-area: h; 
+  display: grid;
+  height: 6rem;
+  justify-content: center;
+  align-content: center;
+  border-bottom: var(--line);
+
+  &__logo {
+    height: 7rem;
+    padding: 1rem;
+    margin-top: -1rem;
+  }
+
+  @media only screen and (max-width: 37.5em) {
+    height: 4rem;
+
+    &__logo {
+      height: 4rem;
+      padding: .5rem;
+      margin-top: -1rem;
+    }
+  }
+
+  
+  @media only screen and (max-width: 56.25em) {
+    height: 5rem;
+
+    &__logo {
+      height: 5rem;
+      padding: .7rem;
+      margin-top: -1rem;
+    }
+  }
+
+
+}
+

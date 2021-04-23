@@ -1,0 +1,114 @@
+
+.item {
+
+
+    &__news {
+      position: relative;
+      &:not(:nth-last-col) {
+        border-bottom: var(--line);
+      }
+  
+      &:link, &:visited {
+        color: #000;
+        text-decoration: none;
+      }
+  
+      // padding: 1rem 1.6rem;
+      padding: 1.8rem;
+      overflow: hidden;
+  
+      &:not(:first-child) {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 1.6rem;
+          left: 0;
+          bottom: 1.6rem;
+          width: 1px;
+          background-color: var(--color-grey-light-3);
+        }
+      }
+      &-title {
+        font-size: 1.6rem;
+        margin-bottom: .5rem;
+      }
+    
+      &-desc {
+        font-size: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* number of lines to show */
+        -webkit-box-orient: vertical;
+      }
+    
+      &-time {
+        font-size: 1.2rem;
+        padding: 1rem 0;
+      }
+  
+      &-sub {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: .5rem;
+        overflow: hidden;
+      }
+  
+      &-figure {
+        // width: 100%;
+        // height: 100%;
+        overflow: hidden;
+      }
+  
+      &-image {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+      }
+  
+      @media only screen and (max-width: 56.25em) {
+        &-title {
+          font-size: 1.6rem;
+          margin-bottom: .8rem;
+          
+        }
+    
+        &-desc {
+          font-size: .8rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2; /* number of lines to show */
+          -webkit-box-orient: vertical;
+        }
+  
+        &-time {
+          font-size: 1rem;
+          padding: 1rem 0;
+        }
+      }
+  
+      @media only screen and (max-width: 37.5em) {
+        &-title {
+          font-size: 1rem;
+          margin-bottom: .5rem;
+          
+        }
+    
+        &-desc {
+          font-size: .5rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2; /* number of lines to show */
+          -webkit-box-orient: vertical;
+        }
+        &-time {
+          font-size: .8rem;
+          padding: 1rem 0;
+        }
+      }
+  
+  
+    }
+  }
